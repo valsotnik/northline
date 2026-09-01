@@ -1,0 +1,4 @@
+autoInstallPeers: true
+onlyBuiltDependencies:
+  - esbuild
+  - nx

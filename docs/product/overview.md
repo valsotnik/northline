@@ -14,31 +14,31 @@ Northline provides a shared view of portfolio state and a consistent path from n
 
 ## Users and responsibilities
 
-| User | Job to be done | May do in the MVP | Must not do in the MVP |
-| --- | --- | --- | --- |
-| Portfolio analyst or adviser | Understand portfolio value, movement, and concentration; identify where investigation is needed | View assigned portfolios and positions, inspect exposure, maintain a personal watchlist, and raise or comment on an exception | Change access, modify source portfolio records, or place an order |
-| Operations or compliance specialist | Investigate data or policy exceptions and make the outcome traceable | View relevant evidence, assign an exception, add a decision note, resolve it, or defer it with a reason | Alter the underlying synthetic transaction history or grant workspace access |
-| Workspace administrator | Keep membership, responsibilities, and reference configuration accurate | Invite or deactivate members, assign roles, and manage workspace-level operational settings | Resolve an exception on behalf of its accountable specialist solely because they are an administrator |
+| User                                | Job to be done                                                                                  | May do in the MVP                                                                                                             | Must not do in the MVP                                                                                |
+| ----------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| Portfolio analyst or adviser        | Understand portfolio value, movement, and concentration; identify where investigation is needed | View assigned portfolios and positions, inspect exposure, maintain a personal watchlist, and raise or comment on an exception | Change access, modify source portfolio records, or place an order                                     |
+| Operations or compliance specialist | Investigate data or policy exceptions and make the outcome traceable                            | View relevant evidence, assign an exception, add a decision note, resolve it, or defer it with a reason                       | Alter the underlying synthetic transaction history or grant workspace access                          |
+| Workspace administrator             | Keep membership, responsibilities, and reference configuration accurate                         | Invite or deactivate members, assign roles, and manage workspace-level operational settings                                   | Resolve an exception on behalf of its accountable specialist solely because they are an administrator |
 
 Access is scoped to a workspace. A person may hold multiple responsibilities, but every action remains attributable to that person and permitted by their active role.
 
 ## Shared vocabulary
 
-| Term | Meaning and identity | Important rule |
-| --- | --- | --- |
-| Organization | The business customer that owns workspaces | Information is never shared across organizations |
-| Workspace | The collaboration and access boundary for a team | Every portfolio, member, and exception belongs to exactly one workspace |
-| Portfolio | Accounts and positions monitored as one business subject | The MVP never changes its source holdings |
-| Account | A custody or reporting subdivision within a portfolio | An account belongs to one portfolio |
-| Position | A holding of one instrument within an account | Quantity, value, and currency are interpreted together |
-| Instrument | A financial product identified independently of any portfolio | It is distinct from a position in that instrument |
-| Market quote | A timestamped synthetic price observation for an instrument | A displayed value must communicate when its supporting quote was observed |
-| Exposure | Value grouped by a dimension such as instrument or currency | A total states its grouping and valuation currency |
-| Watchlist | A user's saved collection of instruments or portfolios to monitor | A watchlist does not change the underlying portfolio |
-| Alert rule | A persistent condition a user wants Northline to notice | An event records an occurrence; it is not the rule |
-| Alert event | A timestamped occurrence produced when an alert condition is met | Acknowledging an event does not change portfolio data |
-| Exception case | Traceable work created for an investigation | It has an accountable status and requires an outcome note for resolution |
-| Audit event | An immutable record of who acted, when, and in which workspace | Corrections add an event rather than rewriting history |
+| Term           | Meaning and identity                                              | Important rule                                                            |
+| -------------- | ----------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| Organization   | The business customer that owns workspaces                        | Information is never shared across organizations                          |
+| Workspace      | The collaboration and access boundary for a team                  | Every portfolio, member, and exception belongs to exactly one workspace   |
+| Portfolio      | Accounts and positions monitored as one business subject          | The MVP never changes its source holdings                                 |
+| Account        | A custody or reporting subdivision within a portfolio             | An account belongs to one portfolio                                       |
+| Position       | A holding of one instrument within an account                     | Quantity, value, and currency are interpreted together                    |
+| Instrument     | A financial product identified independently of any portfolio     | It is distinct from a position in that instrument                         |
+| Market quote   | A timestamped synthetic price observation for an instrument       | A displayed value must communicate when its supporting quote was observed |
+| Exposure       | Value grouped by a dimension such as instrument or currency       | A total states its grouping and valuation currency                        |
+| Watchlist      | A user's saved collection of instruments or portfolios to monitor | A watchlist does not change the underlying portfolio                      |
+| Alert rule     | A persistent condition a user wants Northline to notice           | An event records an occurrence; it is not the rule                        |
+| Alert event    | A timestamped occurrence produced when an alert condition is met  | Acknowledging an event does not change portfolio data                     |
+| Exception case | Traceable work created for an investigation                       | It has an accountable status and requires an outcome note for resolution  |
+| Audit event    | An immutable record of who acted, when, and in which workspace    | Corrections add an event rather than rewriting history                    |
 
 Prefer **exception case** and **audit event**. Avoid issue, incident, task, activity, and log unless a later ticket gives them distinct meanings.
 

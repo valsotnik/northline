@@ -1,0 +1,58 @@
+{
+  "name": "northline",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {
+    "serve": "nx serve web",
+    "build": "nx build web",
+    "lint": "nx lint web",
+    "typecheck": "nx typecheck web",
+    "test": "nx test web",
+    "test:watch": "nx test web --watch",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "check": "pnpm format:check && pnpm lint && pnpm typecheck && pnpm test && pnpm build"
+  },
+  "private": true,
+  "packageManager": "pnpm@10.33.0",
+  "engines": {
+    "node": ">=24.15.0 <25",
+    "pnpm": ">=10 <11"
+  },
+  "dependencies": {
+    "@angular/common": "~22.0.4",
+    "@angular/compiler": "~22.0.4",
+    "@angular/core": "~22.0.4",
+    "@angular/platform-browser": "~22.0.4",
+    "@angular/router": "~22.0.4",
+    "rxjs": "~7.8.0"
+  },
+  "devDependencies": {
+    "@angular-devkit/core": "~22.0.0",
+    "@angular-devkit/schematics": "~22.0.4",
+    "@angular/build": "~22.0.4",
+    "@angular/cli": "~22.0.4",
+    "@angular/compiler-cli": "~22.0.4",
+    "@angular/language-service": "~22.0.4",
+    "@eslint/js": "^9.8.0",
+    "@nx/angular": "23.1.2",
+    "@nx/eslint": "23.1.2",
+    "@nx/eslint-plugin": "23.1.2",
+    "@nx/js": "23.1.2",
+    "@nx/web": "23.1.2",
+    "@nx/workspace": "23.1.2",
+    "@schematics/angular": "~22.0.4",
+    "@swc/helpers": "~0.5.18",
+    "@typescript-eslint/utils": "^8.58.0",
+    "angular-eslint": "^22.0.0",
+    "eslint": "^9.8.0",
+    "eslint-config-prettier": "^10.0.0",
+    "jsdom": "^27.1.0",
+    "nx": "23.1.2",
+    "prettier": "~3.6.2",
+    "tslib": "^2.3.0",
+    "typescript": "~6.0.3",
+    "typescript-eslint": "^8.58.0",
+    "vitest": "^4.0.8"
+  }
+}
