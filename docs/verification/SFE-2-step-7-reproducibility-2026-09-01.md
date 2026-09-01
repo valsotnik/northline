@@ -3,7 +3,7 @@
 - Date: 2026-09-01
 - Branch: `codex/SFE-2-engineering-foundation`
 - Host: macOS on `darwin arm64`
-- Scope: a clean checkout of the committed SFE-2 branch
+- Scope: a clean checkout of committed SFE-2 implementation `8b7f096`
 
 ## Toolchain
 
@@ -42,16 +42,15 @@ The SHA-256 checksum captured before the install was:
 d5e028bba4225f0cabac903e555a48bc7d33f2da53021029af339f266d601619  pnpm-lock.yaml
 ```
 
-The committed branch was cloned with `--no-hardlinks` into a newly created temporary directory.
-The checkout contained no `node_modules`, `.nx`, or `dist` directory when this command started:
+Commit `8b7f096` was cloned with `--no-hardlinks` into a newly created temporary directory. The
+checkout contained no `node_modules`, `.nx`, or `dist` directory when this command started:
 
 ```bash
 pnpm install --frozen-lockfile
 ```
 
-Result: passed. pnpm reported that the lockfile was up to date, skipped dependency resolution,
-and reconstructed the dependency tree from the lockfile. The local `nx` and `ng` executables were
-present after installation.
+Result: passed. pnpm reported that the lockfile was up to date, skipped dependency resolution, and
+installed all 778 packages. The local `nx` and `ng` executables were present after installation.
 
 The post-install checksum was identical:
 
