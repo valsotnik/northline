@@ -57,3 +57,8 @@ WebStorm may create personal run configurations and on-save actions, but the rep
 ## Architecture decisions
 
 - [ADR 0001: Use Nx as the workspace orchestrator](docs/decisions/0001-use-nx-workspace.md)
+
+## Developer guides
+
+- [Engineering foundation](docs/guides/engineering-foundation.md): how Angular, Nx, pnpm,
+  TypeScript, ESLint, Prettier, testing, builds, and architectural boundaries fit together.
