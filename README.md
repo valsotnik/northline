@@ -62,3 +62,5 @@ WebStorm may create personal run configurations and on-save actions, but the rep
 
 - [Engineering foundation](docs/guides/engineering-foundation.md): how Angular, Nx, pnpm,
   TypeScript, ESLint, Prettier, testing, builds, and architectural boundaries fit together.
+- [Delivery workflow](docs/guides/delivery-workflow.md): how a Notion ticket stays traceable through
+  its Codex task, Git branch, commits, pull request, review, and completion.
