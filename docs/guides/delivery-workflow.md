@@ -102,10 +102,13 @@ The workflow deliberately omits or defers ceremony that does not yet justify its
 - Notion ticket:
   [SFE-3 — Establish Notion-to-GitHub delivery traceability and PR workflow](https://app.notion.com/p/3ce45285941b8150a967f3989b8801e5)
 - Branch: `codex/SFE-3-delivery-workflow`
-- Focused commits:
+- Initial implementation commits before review:
   - `174b48a` — `docs(SFE-3): restore ticket workflow guide`
   - `a3bdc07` — `docs(SFE-3): document delivery workflow`
   - `326c818` — `chore(SFE-3): add pull request template`
+- Review follow-up commits: the
+  [PR #1 commit history](https://github.com/valsotnik/northline/pull/1/commits) is authoritative and
+  includes the commit containing this review record.
 - Pull request: [#1](https://github.com/valsotnik/northline/pull/1)
 - Automated gate: `pnpm check` — passed (formatting, linting, type-checking, one unit test, and the
   production build)
@@ -115,12 +118,3 @@ The workflow deliberately omits or defers ceremony that does not yet justify its
   guidance-placement and low-evidence ceremony findings in a focused follow-up.
 - Merge state: pull request #1's GitHub state is authoritative. Merge remains intentionally pending
   until the user approves completion.
-
-## SFE-3 example
-
-```text
-Codex task: SFE-3 — Establish Notion-to-GitHub delivery traceability and PR workflow
-Branch: codex/SFE-3-delivery-workflow
-Commit: docs(SFE-3): document delivery workflow
-PR: SFE-3: Establish delivery traceability and PR workflow
-```
