@@ -64,11 +64,9 @@ demonstrated need for them.
 
 The initial push of `main` at `3c1e7dc` predates the ruleset and is the one-time repository bootstrap
 exception. After the ruleset becomes active, every material change to `main` must use a pull request.
-
-Verified on 2026-09-02: GitHub ruleset
-[`Protect main`](https://github.com/valsotnik/northline/rules/22100317) is active, targets the default
-branch, restricts deletion and non-fast-forward updates, and requires a pull request with zero
-approvals and resolved review threads. It does not yet require status checks.
+The live GitHub ruleset
+[`Protect main`](https://github.com/valsotnik/northline/rules/22100317) is the current verification
+source for its enforcement state.
 
 ## Completion contract
 
@@ -78,6 +76,45 @@ approvals and resolved review threads. It does not yet require status checks.
 4. Record the exact branch name and pull request URL in the Notion ticket.
 5. Complete the required checks and review in the pull request, then merge it.
 6. Mark the Notion ticket `Done` only after review and merge are complete.
+
+## Ceremony review
+
+The workflow retains controls that provide direct traceability or risk reduction:
+
+- one stable `SFE-N` mapping across the ticket, task, branch, commits, and pull request;
+- exact Notion `Branch` and `Pull Request` links;
+- focused commits and an evidence-oriented pull request;
+- a protected `main` branch; and
+- resolved review conversations before merge.
+
+The workflow deliberately omits or defers ceremony that does not yet justify its cost:
+
+- duplicate GitHub issues for requirements already owned by Notion;
+- a required approval for a solo developer;
+- required status checks until SFE-5 establishes stable check names;
+- unconditional screenshots or manual checks when a change has no relevant visible or manual
+  behavior; and
+- signed commits, linear-history enforcement, merge queues, deployment gates, and code-scanning
+  gates without a demonstrated need.
+
+## SFE-3 traceability evidence
+
+- Notion ticket:
+  [SFE-3 — Establish Notion-to-GitHub delivery traceability and PR workflow](https://app.notion.com/p/3ce45285941b8150a967f3989b8801e5)
+- Branch: `codex/SFE-3-delivery-workflow`
+- Focused commits:
+  - `174b48a` — `docs(SFE-3): restore ticket workflow guide`
+  - `a3bdc07` — `docs(SFE-3): document delivery workflow`
+  - `326c818` — `chore(SFE-3): add pull request template`
+- Pull request: [#1](https://github.com/valsotnik/northline/pull/1)
+- Automated gate: `pnpm check` — passed (formatting, linting, type-checking, one unit test, and the
+  production build)
+- Branch protection evidence:
+  [`Protect main`](https://github.com/valsotnik/northline/rules/22100317)
+- Review disposition: the Step 6 review retained the evidence-bearing controls and resolved the
+  guidance-placement and low-evidence ceremony findings in a focused follow-up.
+- Merge state: pull request #1's GitHub state is authoritative. Merge remains intentionally pending
+  until the user approves completion.
 
 ## SFE-3 example
 

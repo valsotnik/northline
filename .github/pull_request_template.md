@@ -16,10 +16,10 @@
 
 ## Verification
 
-<!-- List the commands or manual checks run and their results. -->
+<!-- Record exact commands or checks and their outcomes. -->
 
-- [ ] Automated checks passed
-- [ ] Relevant manual checks passed, or N/A
+- Automated checks: <!-- For example, `pnpm check` — passed. -->
+- Manual checks: <!-- List checks and outcomes, or write N/A with a reason. -->
 
 ## Risk and recovery
 
@@ -33,4 +33,4 @@
 
 ## Screenshots
 
-<!-- Required only for visible UI changes. Add before/after screenshots, or write N/A. -->
+<!-- Delete this section when there is no visible UI change. For visible UI changes, add before/after screenshots. -->

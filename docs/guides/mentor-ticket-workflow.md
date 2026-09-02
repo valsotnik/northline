@@ -1,6 +1,10 @@
-# Ticket workflow
+# Mentor ticket workflow
 
-Use one Notion ticket, one Codex chat, one Git branch, and normally one pull request per outcome.
+This guide governs how a learner and Codex collaborate one step at a time. The
+[delivery workflow](delivery-workflow.md) governs artifact identity, GitHub delivery, review
+evidence, and completion.
+
+Use one Codex task per Notion ticket and keep the learning conversation focused on that outcome.
 
 ## 1. Start a ticket
 
@@ -92,7 +96,8 @@ SFE-N is ready for review.
 Sync Notion: yes.
 ```
 
-Codex checks the acceptance criteria, diff, tests, and evidence, then reports **must fix**, **should fix**, and **optional** feedback. The ticket moves to `In Review`, not directly to `Done`.
+Codex checks the acceptance criteria, diff, tests, and evidence, then reports **must fix**, **should
+fix**, and **optional** feedback. The ticket moves to `In Review`, not directly to `Done`.
 
 ## 5. Approve completion
 
@@ -103,7 +108,8 @@ SFE-N approved.
 Sync Notion: yes.
 ```
 
-Codex integrates the approved branch, records the evidence, marks the ticket `Done`, and makes the next dependency-ready ticket `Ready`.
+Codex follows the delivery workflow to integrate the approved branch, record the evidence, mark the
+ticket `Done`, and make the next dependency-ready ticket `Ready`.
 
 ## Rules
 
@@ -111,6 +117,7 @@ Codex integrates the approved branch, records the evidence, marks the ticket `Do
 - Do not reveal every hint before attempting the task.
 - Do not mark a ticket `Done` before review.
 - Start a new chat for the next ticket; keep using the same project folder.
-- Notion holds requirements and progress; Git holds code history; the repository holds durable technical truth.
+- Use the delivery workflow when deciding where artifact identity, review evidence, and completion
+  state belong.
 
 Reference: [OpenAI — Projects and chats](https://learn.chatgpt.com/docs/projects)
