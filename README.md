@@ -57,9 +57,12 @@ WebStorm may create personal run configurations and on-save actions, but the rep
 ## Architecture decisions
 
 - [ADR 0001: Use Nx as the workspace orchestrator](docs/decisions/0001-use-nx-workspace.md)
+- [ADR 0002: Defer repository-scoped MCP configuration](docs/decisions/0002-defer-repository-scoped-mcp.md)
 
 ## Developer guides
 
+- [AI engineering working agreement](AGENTS.md): repository context, engineering constraints,
+  mentor/delegation behavior, review expectations, and security rules for Codex-assisted work.
 - [Engineering foundation](docs/guides/engineering-foundation.md): how Angular, Nx, pnpm,
   TypeScript, ESLint, Prettier, testing, builds, and architectural boundaries fit together.
 - [Mentor ticket workflow](docs/guides/mentor-ticket-workflow.md): how a learner and Codex work
