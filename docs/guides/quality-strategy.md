@@ -32,6 +32,11 @@ Local development and CI should call the same repository scripts so failures nam
 both places. Deferred gates should enter only when they have an owner, an actionable failure mode, and
 a feedback cost appropriate for the daily development loop.
 
+Initial test ownership belongs to the frontend feature owner for the behavior being changed. Until a
+separate platform or quality owner exists, the repository maintainer owns triage for format, lint,
+type-check, and build gate failures, while the author of each feature owns adding or updating the
+unit tests that protect that feature's behavior.
+
 ## Local command contract
 
 The root `package.json` scripts are the local quality interface. Use those scripts instead of global
