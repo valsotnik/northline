@@ -33,8 +33,8 @@ Angular build details, matching the SFE-2 verification record.
 
 ## Branch protection evidence
 
-GitHub Actions run `33768111815` completed these `Quality` workflow checks successfully on PR #3
-commit `5661d2e1c37d10089537d01abf1e0bff403e33e7`:
+At review time, GitHub Actions run `33769027643` completed these `Quality` workflow checks
+successfully on PR #3 commit `26fc50c1af54a879ea7cae7cc24ea5ddf114bb0b`:
 
 1. `format`
 2. `lint`
