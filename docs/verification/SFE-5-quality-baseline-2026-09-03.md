@@ -32,8 +32,8 @@ That limitation matches the SFE-2 verification record.
 
 ## Branch protection evidence
 
-GitHub Actions completed these `Quality` workflow checks successfully on PR #3 commit
-`7f28eb5ac94558e3c56ff0c01c57bd0640cdf295`:
+GitHub Actions run `33768111815` completed these `Quality` workflow checks successfully on PR #3
+head commit `5661d2e1c37d10089537d01abf1e0bff403e33e7`:
 
 1. `format`
 2. `lint`
