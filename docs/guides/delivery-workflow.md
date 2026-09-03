@@ -58,9 +58,10 @@ Zero approvals keeps the pull request as auditable delivery evidence without req
 developer to approve a one-developer project. Conversation resolution still prevents unresolved
 review findings from being silently merged.
 
-Do not require status checks until SFE-5 creates stable CI check names. Also leave signed commits,
-linear history, merge queues, deployments, and code-scanning gates disabled until the project has a
-demonstrated need for them.
+Require the stable SFE-5 quality checks once GitHub has observed them on a pull request:
+`format`, `lint`, `typecheck`, `test`, and `build`. Leave signed commits, linear history, merge
+queues, deployments, and code-scanning gates disabled until the project has a demonstrated need for
+them.
 
 The initial push of `main` at `3c1e7dc` predates the ruleset and is the one-time repository bootstrap
 exception. After the ruleset becomes active, every material change to `main` must use a pull request.
@@ -91,7 +92,7 @@ The workflow deliberately omits or defers ceremony that does not yet justify its
 
 - duplicate GitHub issues for requirements already owned by Notion;
 - a required approval for a solo developer;
-- required status checks until SFE-5 establishes stable check names;
+- required checks beyond the SFE-5 `format`, `lint`, `typecheck`, `test`, and `build` quality jobs;
 - unconditional screenshots or manual checks when a change has no relevant visible or manual
   behavior; and
 - signed commits, linear-history enforcement, merge queues, deployment gates, and code-scanning

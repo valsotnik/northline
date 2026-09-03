@@ -65,6 +65,8 @@ WebStorm may create personal run configurations and on-save actions, but the rep
   mentor/delegation behavior, review expectations, and security rules for Codex-assisted work.
 - [Engineering foundation](docs/guides/engineering-foundation.md): how Angular, Nx, pnpm,
   TypeScript, ESLint, Prettier, testing, builds, and architectural boundaries fit together.
+- [Quality strategy](docs/guides/quality-strategy.md): which checks block delivery now and what
+  evidence will justify future gates.
 - [Mentor ticket workflow](docs/guides/mentor-ticket-workflow.md): how a learner and Codex work
   through a ticket one step at a time.
 - [Delivery workflow](docs/guides/delivery-workflow.md): how a Notion ticket stays traceable through

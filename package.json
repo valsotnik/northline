@@ -4,11 +4,11 @@
   "license": "MIT",
   "scripts": {
     "serve": "nx serve web",
-    "build": "nx build web",
-    "lint": "nx lint web",
-    "typecheck": "nx typecheck web",
-    "test": "nx test web",
-    "test:watch": "nx test web --watch",
+    "build": "nx run web:build",
+    "lint": "nx run web:lint",
+    "typecheck": "nx run web:typecheck",
+    "test": "nx run web:test",
+    "test:watch": "nx run web:test --watch",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "check": "pnpm format:check && pnpm lint && pnpm typecheck && pnpm test && pnpm build"
