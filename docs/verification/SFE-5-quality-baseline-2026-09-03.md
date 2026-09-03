@@ -32,7 +32,8 @@ That limitation matches the SFE-2 verification record.
 
 ## Branch protection evidence
 
-The stable required check names for the GitHub main-branch ruleset are:
+GitHub Actions completed these `Quality` workflow checks successfully on PR #3 commit
+`7f28eb5ac94558e3c56ff0c01c57bd0640cdf295`:
 
 1. `format`
 2. `lint`
@@ -40,7 +41,7 @@ The stable required check names for the GitHub main-branch ruleset are:
 4. `test`
 5. `build`
 
-The repository currently has no local `gh` CLI, and this Codex task has no safe non-interactive
-GitHub ruleset administration path. Configure these checks in the existing `Protect main` ruleset
-after the `Quality` workflow has run at least once on the pull request, then link the GitHub ruleset
-or PR evidence from the ticket before marking SFE-5 complete.
+The active `Protect main` repository ruleset, updated on 2026-09-03 at 16:31:07 Europe/Warsaw time,
+requires those same five status checks from the GitHub Actions integration. The ruleset also keeps
+deletion protection, non-fast-forward protection, pull requests before merge, and required review
+thread resolution active without bypass actors.
