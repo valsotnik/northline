@@ -1,0 +1,148 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Northline Portfolio Contract Proof",
+    "version": "0.1.0",
+    "description": "Minimal SFE-6 contract proof for generated frontend transport types. This is not a production portfolio endpoint."
+  },
+  "servers": [
+    {
+      "url": "/api/v1"
+    }
+  ],
+  "paths": {
+    "/portfolio-summary-proof": {
+      "get": {
+        "operationId": "getPortfolioSummaryProof",
+        "summary": "Return the portfolio summary contract proof.",
+        "tags": ["Portfolio proof"],
+        "responses": {
+          "200": {
+            "description": "Synthetic portfolio summary proof response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PortfolioSummaryProofResponse"
+                },
+                "examples": {
+                  "northlineSynthetic": {
+                    "summary": "Synthetic portfolio summary proof",
+                    "value": {
+                      "portfolioId": "pf-northstar-income",
+                      "portfolioName": "Northstar Income",
+                      "valuationCurrency": "USD",
+                      "totalValue": "12845000.00",
+                      "dailyMovement": {
+                        "amount": "-42850.25",
+                        "percent": "-0.33"
+                      },
+                      "largestExposure": {
+                        "instrumentId": "inst-us-treasury-10y",
+                        "instrumentName": "US Treasury 10Y",
+                        "percentOfPortfolio": "18.42"
+                      },
+                      "observedAt": "2026-09-04T08:00:00.000Z",
+                      "freshness": "current"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "PortfolioSummaryProofResponse": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "portfolioId",
+          "portfolioName",
+          "valuationCurrency",
+          "totalValue",
+          "dailyMovement",
+          "largestExposure",
+          "observedAt",
+          "freshness"
+        ],
+        "properties": {
+          "portfolioId": {
+            "type": "string",
+            "description": "Synthetic portfolio identifier."
+          },
+          "portfolioName": {
+            "type": "string",
+            "description": "Synthetic display name for the portfolio."
+          },
+          "valuationCurrency": {
+            "type": "string",
+            "minLength": 3,
+            "maxLength": 3,
+            "description": "ISO 4217 valuation currency code."
+          },
+          "totalValue": {
+            "type": "string",
+            "pattern": "^-?\\d+\\.\\d{2}$",
+            "description": "Decimal money amount serialized as a string."
+          },
+          "dailyMovement": {
+            "$ref": "#/components/schemas/SignedMovement"
+          },
+          "largestExposure": {
+            "$ref": "#/components/schemas/LargestExposure"
+          },
+          "observedAt": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Timestamp for the synthetic observation."
+          },
+          "freshness": {
+            "type": "string",
+            "enum": ["current", "stale"],
+            "description": "Freshness state of the synthetic portfolio summary."
+          }
+        }
+      },
+      "SignedMovement": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["amount", "percent"],
+        "properties": {
+          "amount": {
+            "type": "string",
+            "pattern": "^-?\\d+\\.\\d{2}$",
+            "description": "Signed decimal money amount serialized as a string."
+          },
+          "percent": {
+            "type": "string",
+            "pattern": "^-?\\d+\\.\\d{2}$",
+            "description": "Signed percentage serialized as a string."
+          }
+        }
+      },
+      "LargestExposure": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["instrumentId", "instrumentName", "percentOfPortfolio"],
+        "properties": {
+          "instrumentId": {
+            "type": "string",
+            "description": "Synthetic instrument identifier."
+          },
+          "instrumentName": {
+            "type": "string",
+            "description": "Synthetic instrument display name."
+          },
+          "percentOfPortfolio": {
+            "type": "string",
+            "pattern": "^\\d+\\.\\d{2}$",
+            "description": "Percentage of portfolio value serialized as a string."
+          }
+        }
+      }
+    }
+  }
+}
